@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="webApp" ng-controller="AppController as app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.useso.com/js/angular.js/1.2.5/angular.min.js"></script>
+    <script src="http://libs.useso.com/js/angular.js/1.2.5/angular-route.min.js"></script>
+    <script>
+        angular.module('webApp', ['ngNewRouter'])
+                .controller('AppController', ['$router', AppController]);
+
+        AppController.$routeConfig = [
+        ];
+
+        function AppController ($router) {
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <ng-viewport></ng-viewport>
+</div>
+</body>
+</html>

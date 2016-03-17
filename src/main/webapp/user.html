@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="UserApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.useso.com/js/angular.js/1.2.5/angular.min.js"></script>
+    <script src="controller/httpController.js"></script>
+</head>
+<body>
+<div ng-controller="myUser">
+    <ul ng-repeat="user in users">
+        <li>
+            {{user.name}}
+        </li>
+    </ul>
+
+    {{abc}}
+</div>
+<div ng-controller="getUser">
+    <!--myuser:{{myUser.name}-->
+    <br>
+    {{userName}}<br>
+
+    <input type="text" ng-model="userName"><br>
+    <button type="button" ng-click="getUser()">提交</button><br>
+
+    {{user1.name}}
+    {{abc}}<br>
+    {{status}}
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="httpEngineApp">
+<head>
+    <meta charset="utf-8">
+    <script src="http://libs.useso.com/js/angular.js/1.2.5/angular.min.js"></script>
+    <script src="http://libs.useso.com/js/angular.js/1.2.5/angular-route.min.js"></script>
+    <script src="http://libs.useso.com/js/angular.js/1.2.5/angular-resource.js"></script>
+    <script src="controller/httpEngine.js"></script>
+    <script src="controller/myAppController.js"></script>
+</head>
+<body>
+
+<script>
+    var httpEngineApp = angular.module('httpEngineApp', [
+        'ngRoute',
+        'httpEngineControllers',     //上面定义的controller
+        'httpEngineServices'         //上面自定义的服务
+    ]);
+</script>
+
+<div ng-controller="TestCtrl">
+    <input ng-model="userName" type="text">
+    <button type="button" ng-click="doUser()">获取用户</button>
+    <p>{{user1}}</p>
+
+    bac1{{abc1}}<br>
+    bac2{{abc2}}<br>
+    bac3{{abc3}}<br>
+    bac4{{abc4}}<br>
+</div>
+
+</body>
+</html>
